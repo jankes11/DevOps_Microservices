@@ -8,7 +8,7 @@
 dockerpath="jankes11/predictions_app"
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run predictions_app\
+kubectl run predictionsApp\
     --image=$dockerpath\
     --port=80 
 
@@ -17,4 +17,4 @@ kubectl run predictions_app\
 kubectl get pods
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward predictions_app 8000:80
+kubectl port-forward predictionsApp 8000:80
