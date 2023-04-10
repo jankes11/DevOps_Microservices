@@ -9,9 +9,8 @@ dockerpath="jankes11/predictions_app"
 # Step 2
 # Run the Docker Hub container with kubernetes
 kubectl run predictions_app\
-    --generator=run-pod/v1\
     --image=$dockerpath\
-    --port=80 --labels app=predictions_app
+    --port=80 
 
 # Step 3:
 # List kubernetes pods
