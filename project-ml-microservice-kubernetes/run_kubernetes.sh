@@ -5,16 +5,14 @@
 # Step 1:
 # This is your Docker ID/path
 # dockerpath=<>
-dockerpath="jankes11/predictions_app"
+dockerpath='jankes11/predictions_app:latest'
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run predictionsApp\
-    --image=$dockerpath\
-    --port=80 
+kubectl run microsservice --image=$dockerpath --port=80
 
 # Step 3:
 # List kubernetes pods
 kubectl get pods
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward predictionsApp 8000:80
+kubectl port-forward microsservice 8000:80
